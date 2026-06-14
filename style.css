@@ -8,3 +8,7 @@ body{
 body{
     font-family: sans-serif;
 }
+.income-expense-container{
+    display: flex;
+    gap: 20px;
+}
