@@ -12,3 +12,19 @@ body{
     display: flex;
     gap: 20px;
 }
+.income-container{
+    padding: 20px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: green;
+}
+.expense-container{
+    padding: 20px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: red;
+}
