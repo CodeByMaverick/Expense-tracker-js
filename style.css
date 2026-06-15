@@ -28,3 +28,10 @@ body{
     border-radius: 20px;
     background-color: red;
 }
+.container{
+    width: 400px;
+    margin: auto;
+}
+input{
+    width: 100%;
+}
