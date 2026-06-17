@@ -38,6 +38,10 @@ body{
 }
 input{
     width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
 }
 .history-container{
     margin-bottom: 30px;
@@ -58,4 +62,7 @@ button{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+button:hover{
+    background-color: #2563eb;
 }
