@@ -25,3 +25,10 @@ A modern expense tracker built with vanilla JavaScript.
 🚧 Work in Progress
 
 Part of my journey toward becoming a Full-Stack Developer.
+
+ ## Learning Goals
+
+- DOM Manipulation
+- Event Listeners
+- Arrays and Objects
+- Local Storage
