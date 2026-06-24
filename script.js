@@ -11,6 +11,8 @@ button.addEventListener("click", function(){
     const newLi = document.createElement("li");
     newLi.textContent = textInput.value + " " + numberInput.value;
     transactionList.appendChild(newLi);
+    textInput.value = "";
+    numberInput.value = "";
 
 });
 const textInput = document.querySelector('input[type = "text"]');
