@@ -1,5 +1,6 @@
 console.log("JS connected");
 
+// DOM elements 
 const button = document.querySelector("button")
 const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
@@ -7,6 +8,7 @@ const transactionList = document.querySelector("ul");
 
 console.log(button);
 
+// Event listners 
 button.addEventListener("click", function(){
     console.log("Button clicked!");
     console.log(textInput.value);
