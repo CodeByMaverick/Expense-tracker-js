@@ -1,6 +1,10 @@
 console.log("JS connected");
 
 // DOM elements 
+const balaceElement = document.querySelector("#balance")
+const incomeElement = document.querySelector("#income")
+const expenseElement = document.querySelector("#expense")
+
 const button = document.querySelector("button")
 const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
