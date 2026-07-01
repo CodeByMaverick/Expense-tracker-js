@@ -25,3 +25,11 @@ button.addEventListener("click", function(){
     numberInput.value = "";
 
 });
+
+let balance = 4570
+let income = 5000
+let expense = 430
+
+balaceElement.textContent = "$" + balance;
+incomeElement.textContent = "$" + income;
+expenseElement.textContent = "$" + expense;
