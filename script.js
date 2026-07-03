@@ -33,6 +33,13 @@ button.addEventListener("click", function(){
     numberInput.value = "";
 
     console.log("After clearing:", numberInput.value);
+
+    if(amount > 0){
+    console.log("Income");
+}
+else{
+    console.log("Expense")
+}
     
 });
 
