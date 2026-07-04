@@ -36,6 +36,8 @@ button.addEventListener("click", function(){
 
     if(amount > 0){
     console.log("Income");
+    income = income + amount;
+    incomeElement.textContent = "$" + income;
 }
 else{
     console.log("Expense")
