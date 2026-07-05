@@ -13,6 +13,12 @@ const transactionList = document.querySelector("ul");
 
 // Event listners 
 button.addEventListener("click", function(){
+
+    if(textInput.value === "" || numberInput.value === ""){
+        alert("Please Fill in Both Fields");
+        return;
+    } 
+
     console.log("Button clicked!");
     console.log(textInput.value);
     console.log(numberInput.value);
@@ -38,11 +44,12 @@ button.addEventListener("click", function(){
     console.log("Income");
     income = income + amount;
     incomeElement.textContent = "$" + income;
-}
-else{
-    console.log("Expense")
-}
-    
+    }
+
+    else{
+        console.log("Expense");
+    }
+
 });
 
 let balance = 4570
