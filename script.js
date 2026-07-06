@@ -48,6 +48,8 @@ button.addEventListener("click", function(){
 
     else{
         console.log("Expense");
+        expense = expense + Math.abs(amount);
+        expenseElement.textContent = "$" + expense;
     }
 
 });
