@@ -1,7 +1,7 @@
 console.log("JS connected");
 
 // DOM elements 
-const balaceElement = document.querySelector("#balance")
+const balanceElement = document.querySelector("#balance")
 const incomeElement = document.querySelector("#income")
 const expenseElement = document.querySelector("#expense")
 
@@ -10,6 +10,10 @@ const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
 const transactionList = document.querySelector("ul");
 
+// Initial application data
+let balance = 4570
+let income = 5000
+let expense = 430
 
 // Event listners 
 button.addEventListener("click", function(){
@@ -32,7 +36,7 @@ button.addEventListener("click", function(){
     newLi.textContent = textInput.value + " " + numberInput.value;
     transactionList.appendChild(newLi);
     textInput.value = "";
-    //numberInput.value = "";
+    numberInput.value = "";
 
      console.log("Before clearing:", numberInput.value);
 
@@ -40,24 +44,25 @@ button.addEventListener("click", function(){
 
     console.log("After clearing:", numberInput.value);
 
+    // Upadte totals based on transaction type
     if(amount > 0){
     console.log("Income");
     income = income + amount;
+    balance = balance + amount;
     incomeElement.textContent = "$" + income;
+    balanceElement.textContent = "$" + balance;
     }
 
     else{
         console.log("Expense");
         expense = expense + Math.abs(amount);
+        balance = balance - Math.abs(amount);
         expenseElement.textContent = "$" + expense;
+        balanceElement.textContent = "$" + balance;
     }
 
 });
 
-let balance = 4570
-let income = 5000
-let expense = 430
-
-balaceElement.textContent = "$" + balance;
+balanceElement.textContent = "$" + balance;
 incomeElement.textContent = "$" + income;
 expenseElement.textContent = "$" + expense;
