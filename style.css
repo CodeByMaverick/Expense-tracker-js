@@ -76,3 +76,9 @@ li{
     margin-bottom: 20px;
     border-radius: 8px;
 }
+.Income{
+    color: yellowgreen;
+}
+.Expense{
+    color: lightcoral;
+}

@@ -51,6 +51,7 @@ button.addEventListener("click", function(){
     balance = balance + amount;
     incomeElement.textContent = "$" + income;
     balanceElement.textContent = "$" + balance;
+    newLi.classList.add("Income");
     }
 
     else{
@@ -59,6 +60,7 @@ button.addEventListener("click", function(){
         balance = balance - Math.abs(amount);
         expenseElement.textContent = "$" + expense;
         balanceElement.textContent = "$" + balance;
+        newLi.classList.add("Expense");
     }
 
 });
