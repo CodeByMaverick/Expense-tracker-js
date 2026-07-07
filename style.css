@@ -23,6 +23,7 @@ body{
     border-style: solid;
     border-radius: 20px;
     background-color: green;
+    text-align: right;
 }
 .expense-container{
     padding: 20px;
@@ -31,6 +32,7 @@ body{
     border-style: solid;
     border-radius: 20px;
     background-color: red;
+    text-align: right;
 }
 .container{
     display: flex;
@@ -55,9 +57,6 @@ input{
 .history-container{
     margin-bottom: 50px;
     flex: 1.5;
-}
-.balance-container{
-    margin-bottom: 40px;
 }
 label{
     display: block;
@@ -100,4 +99,35 @@ li{
 }
 .form-container{
     flex: 1;
+}
+h1{
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1px;
+    color: #f5f5f5;
+}
+header{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.balance-container{
+    margin-bottom: 40px;
+    background-color: #2b3445;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: right;
+    width: 240px;
+}
+.balance-container h3{
+    margin: 0;
+    color: #999;
+    font-size: 22px;
+}
+.balance-container h2{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 38px;
 }
