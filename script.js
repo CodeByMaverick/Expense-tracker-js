@@ -72,39 +72,14 @@ button.addEventListener("click", function(){
     console.log(numberInput.value);
 
     const amount = Number(numberInput.value);
-    console.log(amount);
-    console.log(typeof amount);
 
-    const newLi = document.createElement("li");
-
-    newLi.textContent = textInput.value + " " + numberInput.value;
-    transactionList.appendChild(newLi);
+    const newTransaction = {
+        name: textInput.value,
+        amount: amount
+    };
+    transactions.push(newTransaction);
+    calculateTotals();
+    
     textInput.value = "";
     numberInput.value = "";
-
-     console.log("Before clearing:", numberInput.value);
-
-    numberInput.value = "";
-
-    console.log("After clearing:", numberInput.value);
-
-    // Upadte totals based on transaction type
-    if(amount > 0){
-    console.log("Income");
-    income = income + amount;
-    balance = balance + amount;
-    incomeElement.textContent = "$" + income;
-    balanceElement.textContent = "$" + balance;
-    newLi.classList.add("Income");
-    }
-
-    else{
-        console.log("Expense");
-        expense = expense + Math.abs(amount);
-        balance = balance - Math.abs(amount);
-        expenseElement.textContent = "$" + expense;
-        balanceElement.textContent = "$" + balance;
-        newLi.classList.add("Expense");
-    }
-
 });
