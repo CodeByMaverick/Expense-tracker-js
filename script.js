@@ -36,6 +36,8 @@ function calculateTotals(){
     let expense = 0;
     let balance = 0;
 
+    transactionList.innerHTML = "";
+
 transactions.forEach(function(transaction){
     if(transaction.amount > 0){
         income = income + transaction.amount;
@@ -44,6 +46,10 @@ transactions.forEach(function(transaction){
         expense = expense + Math.abs(transaction.amount);
     }
     balance = income - expense;
+
+    const newLi = document.createElement("li");
+    newLi.textContent = transaction.name + " " + transaction.amount + " $";
+    transactionList.appendChild(newLi);
 });
 
 balanceElement.textContent = "$" + balance;
