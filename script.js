@@ -10,10 +10,48 @@ const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
 const transactionList = document.querySelector("ul");
 
-// Initial application data
-let balance = 4570
-let income = 5000
-let expense = 430
+// Application data
+
+const transactions = [
+    {
+        name: "Salary",
+        amount: 5000
+    },
+    {
+        name: "Groceries",
+        amount: -425
+    },
+    {
+        name: "Travel Expense",
+        amount: -600
+    },
+    {
+        name: "Internet Bills",
+        amount: -280
+    }
+];
+
+function calculateTotals(){
+    let income = 0;
+    let expense = 0;
+    let balance = 0;
+
+transactions.forEach(function(transaction){
+    if(transaction.amount > 0){
+        income = income + transaction.amount;
+    }
+    else{
+        expense = expense + Math.abs(transaction.amount);
+    }
+    balance = income - expense;
+});
+
+balanceElement.textContent = "$" + balance;
+incomeElement.textContent = "$" + income;
+expenseElement.textContent = "$" + expense;
+
+}
+calculateTotals();
 
 // Event listners 
 button.addEventListener("click", function(){
@@ -64,7 +102,3 @@ button.addEventListener("click", function(){
     }
 
 });
-
-balanceElement.textContent = "$" + balance;
-incomeElement.textContent = "$" + income;
-expenseElement.textContent = "$" + expense;
