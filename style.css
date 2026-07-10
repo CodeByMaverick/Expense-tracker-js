@@ -88,6 +88,9 @@ li{
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .Income{
     color: yellowgreen;

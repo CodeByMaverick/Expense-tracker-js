@@ -22,6 +22,10 @@ const transactions = [
         amount: -425
     },
     {
+        name: "Bonus",
+        amount: 1200
+    },
+    {
         name: "Travel Expense",
         amount: -600
     },
@@ -47,8 +51,23 @@ transactions.forEach(function(transaction){
     }
     balance = income - expense;
 
+    let amountText;
+    if(transaction.amount > 0){
+        amountText = "+" + transaction.amount;
+    }
+    else{
+        amountText = transaction.amount;
+    }
     const newLi = document.createElement("li");
-    newLi.textContent = transaction.name + " " + transaction.amount + " $";
+
+    const nameSpan = document.createElement("span");
+    const amountSpan = document.createElement("span");
+
+    nameSpan.textContent = transaction.name;
+    amountSpan.textContent = amountText + " $";
+
+    newLi.appendChild(nameSpan);
+    newLi.appendChild(amountSpan);
     transactionList.appendChild(newLi);
 });
 
