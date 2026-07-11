@@ -68,12 +68,15 @@ transactions.forEach(function(transaction){
 
     const nameSpan = document.createElement("span");
     const amountSpan = document.createElement("span");
+    const deleteButton = document.createElement("delete-button");
 
     nameSpan.textContent = transaction.name;
     amountSpan.textContent = amountText + " $";
+    deleteButton.textContent = "x";
 
     newLi.appendChild(nameSpan);
     newLi.appendChild(amountSpan);
+    newLi.appendChild(deleteButton);
     transactionList.appendChild(newLi);
 });
 
