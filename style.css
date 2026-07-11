@@ -92,12 +92,6 @@ li{
     justify-content: space-between;
     align-items: center;
 }
-.Income{
-    color: yellowgreen;
-}
-.Expense{
-    color: lightcoral;
-}
 .bottom-section{
     display: flex;
     justify-content: space-between;
@@ -159,4 +153,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.income-transaction{    
+    border: 0.8px;
+    border-style: solid;
+    border-color: #2fa35d;
+}
+.expense-transaction{
+    border: 0.8px;
+    border-style: solid;
+    border-color: #b84a4a;
 }

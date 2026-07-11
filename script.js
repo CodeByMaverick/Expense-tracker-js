@@ -59,6 +59,12 @@ transactions.forEach(function(transaction){
         amountText = transaction.amount;
     }
     const newLi = document.createElement("li");
+    if(transaction.amount > 0){
+        newLi.classList.add("income-transaction");
+    }
+    else{
+        newLi.classList.add("expense-transaction");
+    }
 
     const nameSpan = document.createElement("span");
     const amountSpan = document.createElement("span");
