@@ -66,7 +66,7 @@ label{
     display: block;
     margin-bottom: 15px;
 }
-button{
+.add-button{
     display: block;
     width: 100%;
     padding: 10px;
@@ -163,4 +163,15 @@ header{
     border: 0.8px;
     border-style: solid;
     border-color: #b84a4a;
+}
+.delete-button{
+    background: transparent;
+    border: none;
+    color: #9a9a9a;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.delete-button:hover{
+    color: #ff5a5a;
 }
