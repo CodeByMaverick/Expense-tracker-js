@@ -42,7 +42,8 @@ function calculateTotals(){
 
     transactionList.innerHTML = "";
 
-transactions.forEach(function(transaction){
+transactions.forEach(function(transaction, index){
+    console.log(index);
     if(transaction.amount > 0){
         income = income + transaction.amount;
     }
@@ -70,6 +71,10 @@ transactions.forEach(function(transaction){
     const amountSpan = document.createElement("span");
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("delete-button")
+    deleteButton.addEventListener("click", function(){
+        transactions.splice(index ,1);
+        calculateTotals();
+    });
 
     nameSpan.textContent = transaction.name;
     amountSpan.textContent = amountText + " $";
