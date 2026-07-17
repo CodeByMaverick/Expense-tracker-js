@@ -112,6 +112,7 @@ button.addEventListener("click", function(){
         amount: amount
     };
     transactions.push(newTransaction);
+    localStorage.setItem("transactions", JSON.stringify(transactions));
     calculateTotals();
     
     textInput.value = "";
