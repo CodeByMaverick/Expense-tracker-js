@@ -101,6 +101,10 @@ button.addEventListener("click", function(){
         return;
     } 
 
+    if (amount === 0){
+        alert("Amount cannot be 0");
+    }
+
     console.log("Button clicked!");
     console.log(textInput.value);
     console.log(numberInput.value);
