@@ -121,4 +121,5 @@ button.addEventListener("click", function(){
     
     textInput.value = "";
     numberInput.value = "";
+    textInput.focus();
 });
