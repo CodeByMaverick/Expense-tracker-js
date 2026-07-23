@@ -73,6 +73,11 @@ transactions.forEach(function(transaction, index){
     deleteButton.classList.add("delete-button")
     deleteButton.addEventListener("click", function(){
         transactions.splice(index ,1);
+        
+        localStorage.setItem(
+            "transactions",
+            JSON.stringify(transactions)
+        );
         calculateTotals();
     });
 
