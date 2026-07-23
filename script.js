@@ -96,6 +96,8 @@ calculateTotals();
 // Event listners 
 button.addEventListener("click", function(){
 
+     const amount = Number(numberInput.value);
+
     if(textInput.value === "" || numberInput.value === ""){
         alert("Please Fill in Both Fields");
         return;
@@ -108,8 +110,6 @@ button.addEventListener("click", function(){
     console.log("Button clicked!");
     console.log(textInput.value);
     console.log(numberInput.value);
-
-    const amount = Number(numberInput.value);
 
     const newTransaction = {
         name: textInput.value,
