@@ -73,7 +73,7 @@ transactions.forEach(function(transaction, index){
     deleteButton.classList.add("delete-button")
     deleteButton.addEventListener("click", function(){
         transactions.splice(index ,1);
-        
+
         localStorage.setItem(
             "transactions",
             JSON.stringify(transactions)
@@ -103,7 +103,7 @@ button.addEventListener("click", function(){
 
      const amount = Number(numberInput.value);
 
-    if(textInput.value === "" || numberInput.value === ""){
+    if(textInput.value.trim() === "" || numberInput.value === ""){
         alert("Please Fill in Both Fields");
         return;
     } 
