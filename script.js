@@ -10,30 +10,7 @@ const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
 const transactionList = document.querySelector("ul");
 
-// Application data
-
-const transactions = [
-    {
-        name: "Salary",
-        amount: 5000
-    },
-    {
-        name: "Groceries",
-        amount: -425
-    },
-    {
-        name: "Bonus",
-        amount: 1200
-    },
-    {
-        name: "Travel Expense",
-        amount: -600
-    },
-    {
-        name: "Internet Bills",
-        amount: -280
-    }
-];
+const transactions = JSON.parse(localStorage.getItem("transactions")) ?? [];
 
 function calculateTotals(){
     let income = 0;
