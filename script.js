@@ -19,6 +19,10 @@ function calculateTotals(){
 
     transactionList.innerHTML = "";
 
+    if (transactions.length == 0){
+        transactionList.innerHTML = "<li>No Transactions yet</li>";
+    }
+
 transactions.forEach(function(transaction, index){
     console.log(index);
     if(transaction.amount > 0){
