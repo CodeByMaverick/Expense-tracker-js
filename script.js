@@ -79,10 +79,10 @@ expenseElement.textContent = "$" + expense;
 }
 calculateTotals();
 
-// Event listners 
-button.addEventListener("click", function(){
 
-     const amount = Number(numberInput.value);
+function addTransaction(){
+
+    const amount = Number(numberInput.value);
 
     if(textInput.value.trim() === "" || numberInput.value === ""){
         alert("Please Fill in Both Fields");
@@ -91,6 +91,7 @@ button.addEventListener("click", function(){
 
     if (amount === 0){
         alert("Amount cannot be 0");
+        return;
     }
 
     console.log("Button clicked!");
@@ -108,4 +109,20 @@ button.addEventListener("click", function(){
     textInput.value = "";
     numberInput.value = "";
     textInput.focus();
-});
+
+}
+
+// Event listners 
+button.addEventListener("click", addTransaction);
+
+numberInput.addEventListener("keydown", function(event){
+        if (event.key === "Enter"){
+            addTransaction();
+        }
+    });
+
+textInput.addEventListener("keydown", function(event){
+        if (event.key === "Enter"){
+            addTransaction();
+        }
+    });
