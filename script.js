@@ -60,10 +60,21 @@ transactions.forEach(function(transaction, index){
 
     editButton.addEventListener("click", function(){
         editingIndex = index;
+
+        button.textContent = "Save Changes";
+
         textInput.value = transaction.name;
         numberInput.value = transaction.amount;
 
-        button.textContent = "Save Changes";
+        textInput.focus()
+        textInput.setSelectionRange(
+            textInput.value.length,
+            textInput.value.length
+        )
+        numberInput.setSelectionRange(
+            numberInput.value.length,
+            numberInput.value.length
+        )
     });
 
     deleteButton.addEventListener("click", function(){
@@ -125,6 +136,11 @@ function addTransaction(){
     else{
         transactions[editingIndex] = newTransaction
     }
+    button.textContent = "Add Transaction"
+    editingIndex = null;
+    textInput.value == "";
+    numberInput.value == "";
+    textInput.focus();
 
     localStorage.setItem("transactions", JSON.stringify(transactions));
     calculateTotals();
