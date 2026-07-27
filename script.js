@@ -10,6 +10,8 @@ const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
 const transactionList = document.querySelector("ul");
 
+let editingIndex = null;
+
 const transactions = JSON.parse(localStorage.getItem("transactions")) ?? [];
 
 function calculateTotals(){
@@ -55,6 +57,13 @@ transactions.forEach(function(transaction, index){
 
     editButton.classList.add("edit-button")
     deleteButton.classList.add("delete-button")
+
+    editButton.addEventListener("click", function(){
+        editingIndex = index;
+        textInput.value = transaction.name;
+        numberInput.value = transaction.amount;
+    });
+
     deleteButton.addEventListener("click", function(){
         transactions.splice(index ,1);
 
