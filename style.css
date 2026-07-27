@@ -192,4 +192,19 @@ header{
 }
 .cancel-button{
     display: none;
+    background: darkred;
+    color: white;
+    border: solid;
+    border: 4px;
+    border-color: red;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: all;
+    transition: ease;
+    transition: 0.2s;
+}
+.cancel-button:hover{
+    background-color: red
 }
