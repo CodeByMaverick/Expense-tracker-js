@@ -5,7 +5,8 @@ const balanceElement = document.querySelector("#balance")
 const incomeElement = document.querySelector("#income")
 const expenseElement = document.querySelector("#expense")
 
-const button = document.querySelector("button")
+const button = document.querySelector("button");
+const cancelButton = document.querySelector(".cancel-button");
 const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
 const transactionList = document.querySelector("ul");
@@ -62,6 +63,7 @@ transactions.forEach(function(transaction, index){
         editingIndex = index;
 
         button.textContent = "Save Changes";
+        cancelButton.style.display = "inline-block";
 
         textInput.value = transaction.name;
         numberInput.value = transaction.amount;
@@ -136,11 +138,7 @@ function addTransaction(){
     else{
         transactions[editingIndex] = newTransaction
     }
-    button.textContent = "Add Transaction"
-    editingIndex = null;
-    textInput.value == "";
-    numberInput.value == "";
-    textInput.focus();
+    exitEditMode();
 
     localStorage.setItem("transactions", JSON.stringify(transactions));
     calculateTotals();
@@ -151,8 +149,21 @@ function addTransaction(){
 
 }
 
+function exitEditMode(){
+    editingIndex = null;
+    button.textContent = "Add Transaction";
+    cancelButton.style.display = "none";
+    textInput.value = "";
+    numberInput.value = "";
+    textInput.focus();
+}
+
 // Event listners 
 button.addEventListener("click", addTransaction);
+
+cancelButton.addEventListener("click", function(){
+    exitEditMode();
+});
 
 numberInput.addEventListener("keydown", function(event){
         if (event.key === "Enter"){

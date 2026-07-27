@@ -190,3 +190,6 @@ header{
     max-height: 600px;
     overflow-y: auto;
 }
+.cancel-button{
+    display: none;
+}
