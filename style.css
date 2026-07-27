@@ -162,15 +162,13 @@ header{
 .delete-button{
     background: transparent;
     border: none;
-    color: #9a9a9a;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.2s;
     border-radius: 6px;
 }
 .delete-button:hover{
-    color: red;
-    background: transparent;
+    background-color: maroon;
 }
 .dashboard{
     display: flex;

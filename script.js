@@ -51,6 +51,7 @@ transactions.forEach(function(transaction, index){
     const nameSpan = document.createElement("span");
     const amountSpan = document.createElement("span");
     const deleteButton = document.createElement("button");
+    
     deleteButton.classList.add("delete-button")
     deleteButton.addEventListener("click", function(){
         transactions.splice(index ,1);
@@ -64,7 +65,7 @@ transactions.forEach(function(transaction, index){
 
     nameSpan.textContent = transaction.name;
     amountSpan.textContent = amountText + " $";
-    deleteButton.textContent = "×";
+    deleteButton.textContent = "❌";
 
     newLi.appendChild(nameSpan);
     newLi.appendChild(amountSpan);
