@@ -3,7 +3,7 @@ const balanceElement = document.querySelector("#balance")
 const incomeElement = document.querySelector("#income")
 const expenseElement = document.querySelector("#expense")
 
-const addButton = document.querySelector("button");
+const button = document.querySelector("button");
 const cancelButton = document.querySelector(".cancel-button");
 const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
@@ -60,7 +60,7 @@ transactions.forEach(function(transaction, index){
     editButton.addEventListener("click", function(){
         editingIndex = index;
 
-        addButton.textContent = "Save Changes";
+        button.textContent = "Save Changes";
         cancelButton.style.display = "inline-block";
 
         textInput.value = transaction.name;
