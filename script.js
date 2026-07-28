@@ -1,11 +1,9 @@
-console.log("JS connected");
-
 // DOM elements 
 const balanceElement = document.querySelector("#balance")
 const incomeElement = document.querySelector("#income")
 const expenseElement = document.querySelector("#expense")
 
-const button = document.querySelector("button");
+const addButton = document.querySelector("button");
 const cancelButton = document.querySelector(".cancel-button");
 const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
@@ -27,7 +25,7 @@ function calculateTotals(){
     }
 
 transactions.forEach(function(transaction, index){
-    console.log(index);
+
     if(transaction.amount > 0){
         income = income + transaction.amount;
     }
@@ -62,7 +60,7 @@ transactions.forEach(function(transaction, index){
     editButton.addEventListener("click", function(){
         editingIndex = index;
 
-        button.textContent = "Save Changes";
+        addButton.textContent = "Save Changes";
         cancelButton.style.display = "inline-block";
 
         textInput.value = transaction.name;
@@ -122,10 +120,6 @@ function addTransaction(){
         alert("Amount cannot be 0");
         return;
     }
-
-    console.log("Button clicked!");
-    console.log(textInput.value);
-    console.log(numberInput.value);
 
     const newTransaction = {
         name: textInput.value,
