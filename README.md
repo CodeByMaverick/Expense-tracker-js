@@ -1,92 +1,69 @@
-# 💰 Expense Tracker JS
+# Expense Tracker
 
-A modern Expense Tracker built with **HTML, CSS, and Vanilla JavaScript** to practice DOM manipulation, event handling, and JavaScript fundamentals.
+A simple expense tracker built using HTML, CSS and JavaScript.
+
+This project allows users to add, edit and delete transactions while automatically calculating income, expenses and total balance.
+All transactions are stored in Local Storage, so the data remains available even after refreshing the browser.
+
+This project was built to strengthen my understanding of JavaScript fundamentals, DOM Manipulation and CRUD Operations.
 
 
----
+## Features
 
-## ✨ Features
+- Add new transactions
+- Edit existing transactions
+- Cancel editing transactions
+- Delete transactions
+- Automatic balance updates
+- Separate income and expense totals
+- Transactions are saved using Local Storage
+- Clean dark-themed interface
+- Empty history message when no transactions exist
+- Keyboard support (Press enter to add transactions/save changes)
 
-- ✅ Add new income and expense transactions
-- ✅ Automatically calculate total balance
-- ✅ Track total income and expenses separately
-- ✅ Dynamic transaction history
-- ✅ Color-coded transaction cards
-- ✅ Clean dark-themed user interface
-- ✅ Responsive layout
-- 🚧 Delete button UI (Delete functionality coming soon)
-- ⏳ Local Storage (Planned)
 
----
-
-## 🛠️ Built With
+## Built With
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JS (Vanilla JavaScript)
+- Local Storage API
 
----
 
-## 📚 What I Learned
-
-This project helped me practice:
+## Concepts Practiced
 
 - DOM Manipulation
 - Event Listeners
-- Arrays & Objects
-- Functions
-- Conditional Logic
-- Dynamic UI Rendering
-- CSS Flexbox
-- Git & GitHub Workflow
+- Arrays and Objects
+- CRUD Operations 
+- Local Storage 
+- Dynamic element creation
+- Functions and code refactoring
+- Conditional rendering
+- Form validation
 
----
 
-## 🚀 Future Improvements
+## What I learned
 
-- Delete transactions
-- Save data using Local Storage
-- Edit existing transactions
+Building this project helped me understand how JavaScript controls DOM, how CRUD Operations work in a application, and how Local Storage can be used to persist data without a backend. I also learned the importance of refactoring repeated code into reusable functions and keeping code clean and organized.
+
+
+## Preview
+
+![Expense Tracker](assets/Expense-Tracker.png)
+
+
+## Future improvements
+
+- Filter transactions
+- Search transactions
 - Transaction categories
-- Search & Filter transactions
-- Monthly expense summary
-- Charts & Analytics
+- Monthly analytics 
+- Charts and visual reports
+- Responsive design improvements 
+- Backend database integration
 
----
 
-## 📂 Project Structure
+## Author 
 
-```
-expense-tracker/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
----
-
-## 🎯 Project Goal
-
-This project is part of my journey to become a **Full-Stack Developer**.
-
-Rather than copying complete projects, I'm building this step by step to strengthen my understanding of JavaScript, DOM manipulation, and frontend development.
-
----
-
-## 📈 Current Progress
-
-- ✅ Dynamic transaction rendering
-- ✅ Balance calculation
-- ✅ Income & expense tracking
-- ✅ Transaction styling
-- ✅ Delete button UI
-- 🚧 Delete functionality
-- ⏳ Local Storage
-
----
-
-## 🤝 Feedback
-
-If you have suggestions for improving this project, feel free to open an issue or share your feedback.
+Maverick
