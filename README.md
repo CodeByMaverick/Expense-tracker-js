@@ -1,4 +1,4 @@
-# Expense Tracker
+# SpendWise
 
 A simple expense tracker built using HTML, CSS and JavaScript.
 
@@ -50,7 +50,7 @@ Building this project helped me understand how JavaScript controls DOM, how CRUD
 
 ## Preview
 
-![Expense Tracker](assets/Expense-Tracker.png)
+![SpendWise](assets/Expense-Tracker.png)
 
 
 ## Future improvements
