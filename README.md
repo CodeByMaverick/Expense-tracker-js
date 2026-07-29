@@ -50,7 +50,7 @@ Building this project helped me understand how JavaScript controls DOM, how CRUD
 
 ## Preview
 
-![SpendWise](assets/Expense-Tracker.png)
+![SpendWise](assets/SpendWise.png)
 
 
 ## Future improvements
