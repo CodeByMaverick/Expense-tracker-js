@@ -188,7 +188,7 @@ header{
     cursor: pointer;
     transition: 0.2s;
     border-radius: 6px;
-    margin-right: -280px;  /* Will improve it later if needed */
+    margin-right: -200px;  /* Will improve it later if needed */
 }
 
 .dashboard{

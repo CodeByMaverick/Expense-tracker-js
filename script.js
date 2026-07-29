@@ -13,6 +13,27 @@ let editingIndex = null;
 
 const transactions = JSON.parse(localStorage.getItem("transactions")) ?? [];
 
+function formatCurrency(amount, showSign){
+
+    const formattedAmount = Math.abs(amount).toLocaleString("en-US",{
+    minimumFractionDigits:2,
+    maximumFractionDigits: 2
+});
+
+if(showSign){
+    if(amount>0){
+        return "+$" + formattedAmount;
+    }
+    else{
+        return "-$" + formattedAmount;
+    }
+}
+else{
+    return "$" + formattedAmount;
+}
+   
+}
+
 function calculateTotals(){
     let income = 0;
     let expense = 0;
@@ -34,13 +55,8 @@ transactions.forEach(function(transaction, index){
     }
     balance = income - expense;
 
-    let amountText;
-    if(transaction.amount > 0){
-        amountText = "+" + transaction.amount;
-    }
-    else{
-        amountText = transaction.amount;
-    }
+    let amountText = formatCurrency(transaction.amount);
+
     const newLi = document.createElement("li");
     if(transaction.amount > 0){
         newLi.classList.add("income-transaction");
@@ -88,7 +104,7 @@ transactions.forEach(function(transaction, index){
     });
 
     nameSpan.textContent = transaction.name;
-    amountSpan.textContent = amountText + " $";
+    amountSpan.textContent = formatCurrency(transaction.amount, true);
     deleteButton.textContent = "❌";
     editButton.textContent = "✏️";
 
@@ -99,10 +115,9 @@ transactions.forEach(function(transaction, index){
     transactionList.appendChild(newLi);
 });
 
-balanceElement.textContent = "$" + balance;
-incomeElement.textContent = "$" + income;
-expenseElement.textContent = "$" + expense;
-
+balanceElement.textContent = formatCurrency(balance, false);
+incomeElement.textContent = formatCurrency(income, false);
+expenseElement.textContent = formatCurrency(expense, false);
 }
 calculateTotals();
 
@@ -151,6 +166,8 @@ function exitEditMode(){
     numberInput.value = "";
     textInput.focus();
 }
+
+
 
 // Event listners 
 button.addEventListener("click", addTransaction);
