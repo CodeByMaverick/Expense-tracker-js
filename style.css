@@ -131,7 +131,7 @@ header{
     padding: 30px;
     border-radius: 15px;
     text-align: right;
-    width: 240px;
+    width: 38%;
 }
 
 .balance-container h3{
@@ -211,7 +211,7 @@ header{
 .history-container{
     flex: 1;
     min-width: 0px;
-    max-height: 560px;
+    max-height: 580px;
     overflow-y: auto;
 }
 

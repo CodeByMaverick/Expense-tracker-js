@@ -20,6 +20,7 @@ This project was built to strengthen my understanding of JavaScript fundamentals
 - Clean dark-themed interface
 - Empty history message when no transactions exist
 - Keyboard support (Press enter to add transactions/save changes)
+- Responsive Design for Desktop, Tablet and Moblie
 
 
 ## Built With
@@ -41,6 +42,7 @@ This project was built to strengthen my understanding of JavaScript fundamentals
 - Functions and code refactoring
 - Conditional rendering
 - Form validation
+- Responsive Web Design
 
 
 ## What I learned
