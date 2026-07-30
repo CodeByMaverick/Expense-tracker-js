@@ -9,6 +9,9 @@ const textInput = document.querySelector('input[type = "text"]');
 const numberInput = document.querySelector('input[type = "number"]');
 const transactionList = document.querySelector("ul");
 
+//const actionContainer = document.createElement("div");
+//actionContainer.classList.add("action-container");
+
 let editingIndex = null;
 
 const transactions = JSON.parse(localStorage.getItem("transactions")) ?? [];
@@ -68,7 +71,10 @@ transactions.forEach(function(transaction, index){
     const nameSpan = document.createElement("span");
     const amountSpan = document.createElement("span");
     const deleteButton = document.createElement("button");
-    const editButton = document.createElement("button")
+    const editButton = document.createElement("button");
+
+    const actionContainer = document.createElement("div");
+    actionContainer.classList.add("action-container");
 
     editButton.classList.add("edit-button")
     deleteButton.classList.add("delete-button")
@@ -108,10 +114,12 @@ transactions.forEach(function(transaction, index){
     deleteButton.textContent = "❌";
     editButton.textContent = "✏️";
 
+    actionContainer.appendChild(amountSpan);
+    actionContainer.appendChild(editButton);
+    actionContainer.appendChild(deleteButton);
+
     newLi.appendChild(nameSpan);
-    newLi.appendChild(amountSpan);
-    newLi.appendChild(editButton);
-    newLi.appendChild(deleteButton);
+    newLi.appendChild(actionContainer);
     transactionList.appendChild(newLi);
 });
 
