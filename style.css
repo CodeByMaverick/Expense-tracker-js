@@ -204,9 +204,14 @@ header{
     gap: 60px;
 }
 
+.left-column{
+    flex: 1;
+}
+
 .history-container{
-    width: 800px;
-    max-height: 600px;
+    flex: 1;
+    min-width: 0px;
+    max-height: 560px;
     overflow-y: auto;
 }
 
