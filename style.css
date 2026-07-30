@@ -271,5 +271,10 @@ header{
     .left-column{
     width: 100%;
     }
-
+    input{
+        font-size: 16px;
+    }
+    .add-button{
+        font-size: 16px;
+    }
 }
