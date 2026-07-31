@@ -52,7 +52,9 @@ Building this project helped me understand how JavaScript controls DOM, how CRUD
 
 ## Preview
 
-![SpendWise](assets/SpendWise.png)
+![SpendWise-Desktop](assets/SpendWise%20Desktop.png)
+![SpendWise-iPad](assets/%20SpendWise%20iPad.png)
+![SpendWise-Mobile](assets/SpendWise%20Mobile.png)
 
 
 # Application Link
@@ -67,7 +69,6 @@ https://spendwise-dun.vercel.app/
 - Transaction categories
 - Monthly analytics 
 - Charts and visual reports
-- Responsive design improvements 
 - Backend database integration
 
 
