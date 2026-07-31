@@ -53,8 +53,6 @@ Building this project helped me understand how JavaScript controls DOM, how CRUD
 ## Preview
 
 ![SpendWise-Desktop](assets/SpendWise%20Desktop.png)
-![SpendWise-iPad](assets/%20SpendWise%20iPad.png)
-![SpendWise-Mobile](assets/SpendWise%20Mobile.png)
 
 
 # Application Link
